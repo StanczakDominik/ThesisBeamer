@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Fizyka plazmy}{2}{0}{1}
+\beamer@sectionintoc {2}{Algorytmy Particle-in-Cell}{3}{0}{2}
+\beamer@sectionintoc {3}{Kod w Pythonie}{9}{0}{3}
+\beamer@subsectionintoc {3}{1}{Wybrane rozwi\IeC {\k a}zania}{9}{0}{3}

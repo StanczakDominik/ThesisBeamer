@@ -1,0 +1,429 @@
+\documentclass{beamer}
+\usepackage{polski}
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\usetheme[hideothersubsections]{Berkeley}
+
+\title[PIC w~Pythonie]{Implementacja i~analiza wydajności programu do symulacji Particle-in\dywiz Cell w~języku Python}
+\institute{Politechnika Warszawska}
+\author{Dominik Stańczak, dr~Sławomir Jabłoński, dr~Daniel Kikoła}
+\date{20 grudnia 2016, Wstęp do Fizyki Jądrowej}
+
+\newcommand {\framedgraphic}[1] {
+    % \begin{frame}
+        \begin{center}
+            \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{#1}
+        \end{center}
+    % \end{frame}
+}
+
+\begin{document}
+  \frame{\titlepage}
+
+  \section{Energetyka jądrowa w tę i we wtę}
+  \subsection{Energia wiązania}
+
+  \begin{frame}
+    \frametitle{Energia wiązania}
+    \framedgraphic{img/binding_energy.png}
+  \end{frame}
+
+
+  \begin{frame}
+    \frametitle{Ile z was myśli, że...}
+    \begin{itemize}[<+->]
+      \item W tej analogii coś jest?
+      \item W tej analogii jest na tyle czegoś, żeby była możliwa z tego produkcja energii?
+      \item W ten sposób możnaby za naszego życia generować energię?
+      \item W ten sposób już teraz generowana energia?
+      \item Widziało ostatnio coś, co używało tej zasady?
+    \end{itemize}
+   \end{frame}
+
+
+  \begin{frame}
+    \frametitle{Odpowiedź jest jasna.}
+    \framesubtitle{Słońce, no lol.}
+    \framedgraphic{img/large_sun}
+  \end{frame}
+  \begin{frame}[t]{Fuzja jądrowa wodoru!}
+    \framedgraphic{img/hh_fusion}
+  \end{frame}
+
+
+  \begin{frame}
+    \frametitle{Energia wiązania raz jeszcze}
+    \begin{figure}
+      \framedgraphic{img/binding_energy_star}
+    \end{figure}
+  \end{frame}
+
+  \subsection{Prosty model - jakich energii potrzebujemy?}
+  \begin{frame}
+    \frametitle{Mechanika fuzji jądrowej}
+    \framedgraphic{img/energia1.png}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Mechanika (klasyczna) fuzji jądrowej}
+    \framedgraphic{img/energia2.png}
+  \end{frame}
+
+
+  \begin{frame}
+    \frametitle{Kicha}
+    \framesubtitle{Klasyczna}
+    \pause
+    \framedgraphic{img/kaszanka.jpg}
+  \end{frame}
+
+  \begin{frame}[t]{Cytacik}
+    We do not argue with the critic who urges that the stars are not hot enough for this process; we tell him to go and find a hotter place. - Arthur Eddington
+    \framedgraphic{img/Eddington}
+  \end{frame}
+
+
+  \begin{frame}
+    \frametitle{Mechanika (kwantowa, znaczy lepsza) fuzji jądrowej}
+    \framedgraphic{img/energia3.png}
+  \end{frame}
+
+  \section{Praktyczne sposoby na ogólne koncepty}
+  \subsection{Duże ciśnienia, mniejsze temperatury}
+  \begin{frame}
+    \frametitle{Duże ciśnienia, małe temperatury}
+    \framedgraphic{img/ananas}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Jak to jest w Słońcu?}
+    \framedgraphic{img/wikipedia_solarcore}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Ile wyciskamy w praktyce?}
+    \framedgraphic{img/pressure_record}
+  \end{frame}
+
+  \subsection{Duże temperatury, mniejsze ciśnienia}
+  \begin{frame}
+    \frametitle{Duże temperatury, mniejsze ciśnienia}
+    \framedgraphic{img/campfire.png}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Do ilu dochodzimy w praktyce?}
+    \begin{columns}[c]
+      \column{.5\textwidth}
+      \framedgraphic{img/wiki_T}
+      \column{.5\textwidth}
+      \pause
+
+      \framedgraphic{img/facebook_like}
+
+      \pause
+
+      \framedgraphic{img/git_logo}
+    \end{columns}
+  \end{frame}
+
+  \section{Stany materii}
+  \subsection{Odmienne stany skupienia}
+  \begin{frame}
+    \frametitle{Podgrzewanie materii}
+    \framesubtitle{Stan stały}
+    \framedgraphic{img/solid}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Podgrzewanie materii}
+    \framesubtitle{Stan ciekły}
+    \framedgraphic{img/liquid}
+  \end{frame}
+
+
+  \begin{frame}
+    \frametitle{Podgrzewanie materii}
+    \framesubtitle{Stan gazowy}
+    \framedgraphic{img/gas}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Podgrzewanie materii}
+    \framesubtitle{Stan gazowy}
+    \framedgraphic{img/gas2}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Podgrzewanie materii}
+    \framesubtitle{Kompletny wykres przejść fazowych}
+    \framedgraphic{img/phasetransition}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Podgrzewanie materii}
+    \framesubtitle{Gdzie jeszcze mamy drogę ujścia dla energii?}
+    \framedgraphic{img/plasma_zoom}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Podgrzewanie materii}
+    \framesubtitle{Gdzie jeszcze mamy drogę ujścia dla energii?}
+    \framedgraphic{img/plasma_ionise}
+  \end{frame}
+
+  \begin{frame}[t]{Oddziaływania}
+    % TODO
+    \framedgraphic{img/plasma_ionise_novectors.png}
+  \end{frame}
+
+  \begin{frame}[t]{Oddziaływania}
+    \framesubtitle{Każdy z każdym!}
+      % TODO
+    \framedgraphic{img/plasma_ionise_vectors.png}
+  \end{frame}
+
+
+
+  \begin{frame}
+    \frametitle{Zoom out na skalę kosmiczną}
+    99\% obserwowalnej materii we wszechświecie to plazma.
+    \pause
+    \framedgraphic{img/starrynight}
+    \pause
+    To nie plazma jest taka wyjątkowa, to my, jako nie(plazma), jesteśmy specjalni!
+  \end{frame}
+
+\subsection{Przykłady występowania}
+
+\begin{frame}
+  \frametitle{Zjonizowany gaz...}
+  \framesubtitle{Może warto poszukać w powietrzu, c'nie?}
+  \framedgraphic{img/lightning.png}
+\end{frame}
+
+\begin{frame}[t]{Zorze polarne, magnetosfera}
+  \framedgraphic{img/AuroraNorway.jpg}
+\end{frame}
+
+\begin{frame}[t]{Ogień}
+  \framedgraphic{img/campfire.png}
+\end{frame}
+
+\begin{frame}[t]{Świetlówki}
+  \framedgraphic{img/fluorescent}
+\end{frame}
+
+\section{Jak ugryźć plazmę?}
+\begin{frame}[t]{Jak ugryźć plazmę?}
+  \framesubtitle{Z czym to się je?}
+  \pause
+    \begin{alertblock}{UWAGA!}
+    PROSZĘ NIE GRYŹĆ PLAZMY.
+
+    GRYZIENIE PLAZMY MOŻE SKUTKOWAĆ ŚMIERCIĄ.
+
+    PRZED UGRYZIENIEM SKONSULTUJ SIĘ Z FIZYKIEM MEDYCZNYM LUB FARMACEUTĄ.
+  \end{alertblock}
+\end{frame}
+
+
+\subsection{Opis teoretyczny}
+
+\begin{frame}[t]{Elektrodynamika}
+  \begin{itemize}[<+->]
+    \item Ruch materii naładowanej - siła Lorentza jako podstawowa
+    \item Równania Maxwella - ewolucja pola elektromagnetycznego
+    \item Relatywistyka też potrafi być konieczna - całkiem wysokie energie, akceleratory
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[t]{Hydrodynamika}
+  \begin{itemize}[<+->]
+    \item Kolektywne zachowania wielu cząstek
+    \item Równania Naviera-Stokesa
+      \begin{equation}
+      \frac{\partial(\rho e)}{\partial t} + \overrightarrow{\nabla}\cdot((\rho e + p)\overrightarrow{u}) = \overrightarrow{\nabla}\cdot(\overline{\overline{\tau}}\cdot\overrightarrow{u}) + \rho\overrightarrow{f}\overrightarrow{u} + \overrightarrow{\nabla}\cdot(\overrightarrow{\dot{q}})+r \end{equation}
+
+    \item ... z wpiętymi równaniami Maxwella
+    \item \textbf{magnetohydrodynamika}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}[t]{Mechanika klasyczna i dynamika nieliniowa}
+  \begin{itemize}[<+->]
+    \item Często układy prawie zachowawcze (opór!)
+    \item Chaos deterministyczny
+    \item Niestabilności
+    \item Modele na \em{cząstkach} używane do badania \em{turbulencji}
+    \item Heisenberg na łożu śmierci podobno rzekł:
+    \item "Gdy spotkam Boga, zamierzam mu zadać dwa pytania.
+    \item Dlaczego relatywistyka?
+    \item Dlaczego turbulencja?
+    \item Wierzę, że będzie miał odpowiedź na pierwsze."
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[t]{Mechanika kwantowa}
+  ... no w sumie to rzadko.
+  \framedgraphic{img/google_plasma.png}
+  \pause
+  \framedgraphic{img/google_qplasma.png}
+\end{frame}
+
+\begin{frame}[t]{Mechanika statystyczna}
+  \begin{itemize}[<+->]
+    \item Układy daleko od równowagi - fizyka nierównowagowa
+    \item Rzędu $10^{23}$ cząstek
+    \item Złożoność oddziaływań $n^2$
+    \item Mierzalne jedynie wartości średnie i ich odchylenia
+    \item Równanie Vlasova-Maxwella
+    \begin{align}
+      \frac{\partial f_e}{\partial t} + \mathbf {v}_e\cdot\nabla f_e &- e\left(\mathbf {E}+\frac{\mathbf {v_e}}{c}\times\mathbf {B}\right)\cdot\frac{\partial f_e}{\partial\mathbf {p}} = 0 \\
+      \frac{\partial f_i}{\partial t} + \mathbf {v}_i\cdot\nabla f_i &+ Z_i e\left(\mathbf {E}+\frac{\mathbf {v_i}}{c}\times\mathbf {B}\right)\cdot\frac{\partial f_i}{\partial\mathbf {p}} = 0 \\
+      \nabla\times\mathbf {B} &=\frac{4\pi\mathbf {j}}{c}+\frac{1}{c}\frac{\partial\mathbf {E}}{\partial t} \\
+      \nabla\times\mathbf {E} &=-\frac{1}{c}\frac{\partial\mathbf {B}}{\partial t} \\
+      \nabla\cdot\mathbf {E}  &=4\pi\rho \\
+      \nabla\cdot\mathbf {B}  &=0 \\
+    \end{align}
+  \end{itemize}
+\end{frame}
+
+\subsection{Badania doświadczalne}
+\begin{frame}[t]{Badania doświadczalne}
+  \framesubtitle{RGDX}
+  \href{http://scied-web.pppl.gov/rgdx/}{\textbf{Remote Control Glow Discharge Experiment}}
+  na stronie Princeton Plasma Physics Laboratory
+
+  http://scied-web.pppl.gov/rgdx/
+\end{frame}
+
+
+\section{Zastosowania}
+\begin{frame}[t]{Po... co nam to?}
+  \framedgraphic{img/nachujmilas.jpg}
+\end{frame}
+
+\subsection{Zastosowania przemysłowe}
+\begin{frame}[t]{Obróbka mechaniczna}
+  \framedgraphic{img/plasmacutter}
+\end{frame}
+\begin{frame}[t]{Obróbka powierzchniowa}
+  \framedgraphic{img/Plasma_Spraying_Process}
+\end{frame}
+
+\begin{frame}[t]{Plasma CVD}
+  \framedgraphic{img/pcvd}
+\end{frame}
+
+\begin{frame}[t]{Plasma etching}
+  \framedgraphic{img/plasmaetching.png}
+\end{frame}
+
+\subsection{Zastosowania nieco bardziej}
+\begin{frame}[t]{Medycyna plazmowa}
+  \begin{columns}[c]
+    \column{.5\textwidth}
+    \framedgraphic{img/coldplasmamedicine}
+    \column{.5\textwidth}
+    \begin{itemize}[<+->]
+      \item Plazma składa się z naładowanych, aktywnych chemicznie cząstek, jest
+      źródłem fotonów ultrafioletowych
+      \item Strumienie plazmy pod atmosferycznym ciśnieniem wykorzystywane do
+      usuwania bakterii oraz infekcji podskórnych
+      \item Zdaje się przyspieszać gojenie ran, nie wiemy dlaczego
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[t]{Silniki kosmiczne}
+  \framedgraphic{img/Xenon_hall_thruster}
+\end{frame}
+
+\begin{frame}[t]{Akceleratory plazmowe}
+  \framedgraphic{img/plasmaaccelerator}
+\end{frame}
+
+\subsection{Fuzja termojądrowa}
+\begin{frame}[t]{Nie tylko fikcja, ale ku pamięci...}
+  \begin{columns}[c]
+    \column{.5\textwidth}
+    \framedgraphic{img/spiderman2_fusion}
+    \framedgraphic{img/mrfusion1}
+    \column{.5\textwidth}
+    \framedgraphic{img/ironman_tokamak}
+    \framedgraphic{img/interstellar}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[t]{Ivy Mike}
+  \framedgraphic{img/IvyMike}
+\end{frame}
+
+\begin{frame}[t]{Zwierciadła magnetyczne}
+  \framedgraphic{img/magmirror}
+\end{frame}
+
+\begin{frame}[t]{Reaktory toroidalne}
+  \framesubtitle{Tokamaki}
+  \framedgraphic{img/tokamak_scheme}
+\end{frame}
+
+\begin{frame}[t]{COMPASS}
+  \framesubtitle{Tokamaki}
+  \framedgraphic{img/compass}
+\end{frame}
+
+\begin{frame}[t]{ASDEX}
+  \framesubtitle{Tokamaki}
+  \framedgraphic{img/asdex}
+\end{frame}
+
+\begin{frame}[t]{JET}
+  \framesubtitle{Tokamaki}
+  \framedgraphic{img/jet}
+\end{frame}
+
+\begin{frame}[t]{ITER}
+  \framesubtitle{Tokamaki}
+  \framedgraphic{img/ITERsketch}
+\end{frame}
+
+\begin{frame}[t]{ITER}
+  \framesubtitle{Tokamaki}
+  \framedgraphic{img/IterPit}
+\end{frame}
+
+\begin{frame}[t]{Stellarator}
+  \framedgraphic{img/Wendelstein}
+\end{frame}
+
+\begin{frame}[t]{Wendelstein 7-X}
+  \framesubtitle{Stellarator}
+  \framedgraphic{img/wendelstein_magsurfaces}
+\end{frame}
+
+\begin{frame}[t]{Wendelstein 7-X}
+  \framesubtitle{Stellarator}
+  \framedgraphic{img/w7x-diag}
+\end{frame}
+
+\begin{frame}[t]{Tokamaki sferyczne}
+  \framedgraphic{img/spherical_tokamak}
+\end{frame}
+
+\begin{frame}[t]{Inertial Confinement Fusion}
+  \framesubtitle{National Ignition Facility, USA}
+  A może po prostu walnąć w kapsułkę z paliwem ogromnym laserem?
+  \pause
+  \framedgraphic{img/NIF_fuel}
+\end{frame}
+
+\begin{frame}[t]{I tyle w temacie!}
+  Wesołych świąt i samych gwiazdek z nieba!
+\end{frame}
+
+\end{document}
