@@ -3,15 +3,20 @@
 \usepackage[utf8x]{inputenc}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage[outdir=./]{epstopdf}
+\usepackage{svg}
+\usepackage{caption}
+
 
 \usetheme[hideothersubsections]{Hannover}
 
-\title[PIC w~Pythonie]{Implementacja i~analiza wydajności programu do symulacji Particle-in\dywiz Cell w~języku Python}
-\institute{Politechnika Warszawska}
-\author{Dominik Stańczak, dr~Sławomir Jabłoński, dr~inż. Daniel Kikoła}
-\date{TODO stycznia 2018}
+\newcommand{\source}[1]{\caption*{Source: {#1}} }
 
-\newcommand {\framedgraphic}[1] {
+\title[Particle-in-cell]{Algorytm particle-in-cell symulacji plazmy}
+\author{Dominik Stańczak}
+\date{5 kwietnia 2019}
+
+\newcommand {\graphic}[1] {
     % \begin{frame}
         \begin{center}
             \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{#1}
@@ -19,41 +24,127 @@
     % \end{frame}
 }
 
+
+\newcommand {\framedgraphic}[1] {
+    \begin{frame}
+        \begin{center}
+            \includegraphics[width=\textwidth,height=0.6\textheight,keepaspectratio]{#1}
+        \end{center}
+    \end{frame}
+}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
 \begin{document}
     \frame{\titlepage}
-    \section{Fizyka plazmy}
-        \begin{frame}[t]{Czym jest fizyka plazmy?}
-            wew
+    \section{Plazma}
+        \begin{frame}[t]{Plazma}
+          \graphic{plasma_uses}
         \end{frame}
-    \section{Algorytmy Particle-in-Cell}
-        \begin{frame}
-            lol
+        \begin{frame}[t]{Modelowanie plazmy}
+          \graphic{methods}
         \end{frame}
-
-        \begin{frame}[t]{Pętla obliczeniowa}
-
-        \end{frame}
-
-        \begin{frame}[t]{Interpolacja pól}
-
-        \end{frame}
-
-        \begin{frame}[t]{Poruszenie cząstkami}
-
+    \section{Algorytm Particle-in-Cell}
+        \begin{frame}[t]{Makrocząstki}
+          \begin{itemize}[<+->]
+            \item Skalowanie równań ruchu $\frac{q}{m} \to \frac{qN}{mN}$
+            \item Możemy zastąpić $10^{23}$ cząstek przez $\approx 10^{6}$ \textbf{makrocząstek} po $\approx 10^{17}$ każda
+            \item Dynamika się nie zmieni (acz statystyka może - szum!)
+          \end{itemize}
         \end{frame}
 
-        \begin{frame}[t]{Depozycja prądu i ładunku}
+        \begin{frame}[t]{Dyskretna siatka dla wielkości makroskopowych}
+          \begin{itemize}[<+->]
+            \item Zamiast na same cząstki, patrzymy na ich prąd i ładunek \textbf{zrzutowane} na dyskretną Eulerowską siatkę
+            \item Brak liczenia sił międzycząstkowych $N^2$
+            \item "Łagodzimy" dynamikę - tracimy biegun w $\frac{1}{r}$
+            \item Ekranowanie $V(r) \sim \exp(-r) / r$ pojawia się samoistnie
+          \end{itemize}
+        \end{frame}
+        
+    \section{Pętla obliczeniowa PIC}
+
+        \subsection{Push}
+        \begin{frame}[t]{Push}
+          \includesvg[width=\textwidth, height=0.8\textheight]{img/push.svg}
+        \end{frame}
+
+        \subsection{Scatter}
+        \begin{frame}[t]{Scatter}
+          \graphic{img/shapefunctions-eps-converted-to.pdf}
+        \end{frame}
+
+        \subsection{Solve}
+        \begin{frame}[t]{\textbf{Solve} the Maxwell equations}
+          \includesvg[width=\textwidth, height=0.4\textheight]{img/FDTD_Yee_grid_2d-3d.svg}
+          {Siatka Yee używana do numerycznego rozwiązania elektromagnetycznych równań Maxwella. \\
+          \url{https://commons.wikimedia.org/wiki/File:FDTD_Yee_grid_2d-3d.svg}}
+        \end{frame}
+
+        \subsection{Gather}
+        \begin{frame}[t]{Gather}
+          \graphic{img/shapefunctions-eps-converted-to.pdf}
+          ... tylko w drugą stronę!
+        \end{frame}
+        % zaletą algorytmu jest rym
+
+        \subsection{Gather}
+        \begin{frame}[t]{Gather}
+          \graphic{img/shapefunctions-eps-converted-to.pdf}
+          ... tylko w drugą stronę!
+        \end{frame}
+
+        \begin{frame}[t]{\textbf{Pętla} obliczeniowa}
+          \includesvg[width=\textwidth, height=0.8\textheight]{img/pic-cycle.svg}
+        \end{frame}
+
+    \section{Dwa strumienie}
+
+        \begin{frame}[t]{Przypadek niestabilny - animacja}
 
         \end{frame}
 
-        \begin{frame}[t]{``Poruszenie polami'' - równania Maxwella}
-
+        \begin{frame}[t]{Przypadek niestabilny}
+          \graphic{img/TS_UNSTABLE_LARGE_DETAILS.pdf}
         \end{frame}
-    \section{Kod w Pythonie}
-        \subsection{Wybrane rozwiązania}
-            \begin{frame}
 
-            \end{frame}
-    \section{Profilowanie i kod w C++}
-    \section{Wnioski}
+        \section{Elektromagnetyczne oddziaływanie lasera z tarczą}
+        \begin{frame}[t]{Elektromagnetyczne oddziaływanie lasera z tarczą - animacja}
+        \end{frame}
+        \begin{frame}[t]{Pośrednie grzanie wodoru}
+          \graphic{img/FULLLASER_DETAILS.pdf}
+        \end{frame}
+
+    \section{Wyniki - optymalizacja}
+        \begin{frame}[t]{Skalowanie dla kodu w Pythonie}
+          \graphic{img/speed_Python}
+        \end{frame}
+
+        \begin{frame}[t]{Skalowanie porównane z analogicznym kodem w C}
+          \graphic{img/speed_Python_C}
+        \end{frame}
+
+        \begin{frame}[t]{Skalowanie porównane analogicznym z kodem w C zoptymalizowanym z flagą -O}
+          \graphic{img/speed_Python_C_C-O}
+        \end{frame}
+        \begin{frame}[t]{GitHub}
+          \begin{center}
+          \large \url{https://github.com/StanczakDominik/pythonpic}
+        \end{center}
+          % free software - wolne oprogramowanie
+        \end{frame}
+    \begin{frame}[plain, c]
+      \begin{center}
+        \huge Bardzo dziękuję za uwagę!
+      \end{center}
+    \end{frame}
 \end{document}

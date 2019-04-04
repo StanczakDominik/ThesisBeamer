@@ -1,0 +1,5 @@
+digraph G {
+    overlap=scale;
+    "Plasma"[width=3, height=3, fontsize=20, style=filled,color=".7 .3 1.0"]
+    "Plasma" -> {"Nuclear fusion", "Hall engines", "Magnetosphere", "Lightning", "Solar flares", "Garbage utilization", "Skin medicine", "Food processing", "Etching ", "Chemical Vapor Deposition", "Medical neutron generation"}
+}

@@ -1,0 +1,83 @@
+%% Creator: Inkscape inkscape 0.92.4, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'FDTD_Yee_grid_2d-3d_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{348.93182073bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.41125803)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{FDTD_Yee_grid_2d-3d_svg-tex.pdf}}%
+    \put(0.65384801,0.23086291){\color[rgb]{0,0.16862745,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{\textit{E}}\textbf{\textit{x}}\end{tabular}}}}%
+    \put(0.68264821,0.3538176){\color[rgb]{0,0.16862745,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{\textit{E}}\textbf{\textit{z}}\end{tabular}}}}%
+    \put(0.8255415,0.3815101){\color[rgb]{0,0.16862745,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{\textit{E}}\textbf{\textit{y}}\end{tabular}}}}%
+    \put(0.95305896,0.17104709){\color[rgb]{0.16862745,0.06666667,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{\textit{H}}\textbf{\textit{x}}\end{tabular}}}}%
+    \put(0.91637289,0.05418477){\color[rgb]{0.16862745,0.06666667,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{\textit{H}}\textbf{\textit{z}}\end{tabular}}}}%
+    \put(0.784846,0.01630989){\color[rgb]{0.16862745,0.06666667,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{\textit{H}}\textbf{\textit{y}}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{FDTD_Yee_grid_2d-3d_svg-tex.pdf}}%
+    \put(0.60413346,0.04255395){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{z}\end{tabular}}}}%
+    \put(0.70659571,0.06083102){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{y}\end{tabular}}}}%
+    \put(0.63957986,0.14557007){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{x}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{FDTD_Yee_grid_2d-3d_svg-tex.pdf}}%
+    \put(0.06486898,0.0420001){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{y}\end{tabular}}}}%
+    \put(0.00726863,0.10513903){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{x}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{FDTD_Yee_grid_2d-3d_svg-tex.pdf}}%
+    \put(0.35065556,0.0420001){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{y}\end{tabular}}}}%
+    \put(0.2930552,0.10513903){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{x}\end{tabular}}}}%
+    \put(0.44462468,0.22144745){\color[rgb]{0.16862745,0.06666667,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{\textit{H}}\textbf{\textit{x}}\end{tabular}}}}%
+    \put(0.33844291,0.11289285){\color[rgb]{0.16862745,0.06666667,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{\textit{H}}\textbf{\textit{y}}\end{tabular}}}}%
+    \put(0.36695374,0.22144745){\color[rgb]{0,0.16862745,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{\textit{E}}\textbf{\textit{z}}\end{tabular}}}}%
+    \put(0.17112025,0.22144745){\color[rgb]{0,0.16862745,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{\textit{E}}\textbf{\textit{x}}\end{tabular}}}}%
+    \put(0.06621322,0.11289285){\color[rgb]{0,0.16862745,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{\textit{E}}\textbf{\textit{y}}\end{tabular}}}}%
+    \put(0.0922441,0.22144745){\color[rgb]{0.16862745,0.06666667,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{\textit{H}}\textbf{\textit{z}}\end{tabular}}}}%
+    \put(-0.00048529,0.35547922){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{a)} TE\end{tabular}}}}%
+    \put(0.27422428,0.35547923){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{b)} TM\end{tabular}}}}%
+    \put(0.56096112,0.35547923){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textbf{c) }3D\\Yee\\grid\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

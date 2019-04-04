@@ -1,4 +1,11 @@
-\beamer@sectionintoc {1}{Fizyka plazmy}{2}{0}{1}
-\beamer@sectionintoc {2}{Algorytmy Particle-in-Cell}{3}{0}{2}
-\beamer@sectionintoc {3}{Kod w Pythonie}{9}{0}{3}
-\beamer@subsectionintoc {3}{1}{Wybrane rozwi\IeC {\k a}zania}{9}{0}{3}
+\beamer@sectionintoc {1}{Plazma}{2}{0}{1}
+\beamer@sectionintoc {2}{Algorytm Particle-in-Cell}{5}{0}{2}
+\beamer@sectionintoc {3}{P\IeC {\k e}tla obliczeniowa PIC}{13}{0}{3}
+\beamer@subsectionintoc {3}{1}{Push}{14}{0}{3}
+\beamer@subsectionintoc {3}{2}{Scatter}{15}{0}{3}
+\beamer@subsectionintoc {3}{3}{Solve}{16}{0}{3}
+\beamer@subsectionintoc {3}{4}{Gather}{17}{0}{3}
+\beamer@subsectionintoc {3}{5}{Gather}{18}{0}{3}
+\beamer@sectionintoc {4}{Dwa strumienie}{20}{0}{4}
+\beamer@sectionintoc {5}{Elektromagnetyczne oddzia\IeC {\l }ywanie lasera z tarcz\IeC {\k a}}{23}{0}{5}
+\beamer@sectionintoc {6}{Wyniki - optymalizacja}{26}{0}{6}

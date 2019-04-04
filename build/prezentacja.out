@@ -1,4 +1,11 @@
-\BOOKMARK [2][]{Outline0.1}{Fizyka plazmy}{}% 1
-\BOOKMARK [2][]{Outline0.2}{Algorytmy Particle-in-Cell}{}% 2
-\BOOKMARK [2][]{Outline0.3}{Kod w Pythonie}{}% 3
-\BOOKMARK [3][]{Outline0.3.1.9}{Wybrane rozwiazania}{Outline0.3}% 4
+\BOOKMARK [2][]{Outline0.1}{Plazma}{}% 1
+\BOOKMARK [2][]{Outline0.2}{Algorytm Particle-in-Cell}{}% 2
+\BOOKMARK [2][]{Outline0.3}{Petla obliczeniowa PIC}{}% 3
+\BOOKMARK [3][]{Outline0.3.1.14}{Push}{Outline0.3}% 4
+\BOOKMARK [3][]{Outline0.3.2.15}{Scatter}{Outline0.3}% 5
+\BOOKMARK [3][]{Outline0.3.3.16}{Solve}{Outline0.3}% 6
+\BOOKMARK [3][]{Outline0.3.4.17}{Gather}{Outline0.3}% 7
+\BOOKMARK [3][]{Outline0.3.5.18}{Gather}{Outline0.3}% 8
+\BOOKMARK [2][]{Outline0.4}{Dwa strumienie}{}% 9
+\BOOKMARK [2][]{Outline0.5}{Elektromagnetyczne oddzia\233ywanie lasera z tarcza}{}% 10
+\BOOKMARK [2][]{Outline0.6}{Wyniki - optymalizacja}{}% 11

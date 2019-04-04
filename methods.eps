@@ -1,0 +1,494 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.40.1 (20161225.0304)
+%%Title: G
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 698 404
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 662 368 boxprim clip newpath
+1 1 set_scale 0 rotate 40 40 translate
+% Plasma simulation
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+78.643 193 78.7863 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+26.143 189.3 moveto 105 (Plasma simulation) alignedtext
+grestore
+% Fluid models
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+260.2301 247 59.5901 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+222.2301 243.3 moveto 76 (Fluid models) alignedtext
+grestore
+% Plasma simulation->Fluid models
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 126.8283 207.3292 moveto
+151.6873 214.7218 182.0575 223.7532 207.5373 231.3303 curveto
+stroke
+0 0 0 edgecolor
+newpath 206.8185 234.768 moveto
+217.4013 234.2637 lineto
+208.8138 228.0584 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 206.8185 234.768 moveto
+217.4013 234.2637 lineto
+208.8138 228.0584 lineto
+closepath stroke
+grestore
+% Kinetic models
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+260.2301 166 66.8882 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+216.7301 162.3 moveto 87 (Kinetic models) alignedtext
+grestore
+% Plasma simulation->Kinetic models
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 144.7138 183.176 moveto
+159.9367 180.9125 176.1633 178.4998 191.4964 176.2199 curveto
+stroke
+0 0 0 edgecolor
+newpath 192.0474 179.6766 moveto
+201.4239 174.7438 lineto
+191.0178 172.7527 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 192.0474 179.6766 moveto
+201.4239 174.7438 lineto
+191.0178 172.7527 lineto
+closepath stroke
+grestore
+% Magnetohydrodynamics
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+508.7612 342 102.0819 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+438.2612 338.3 moveto 141 (Magnetohydrodynamics) alignedtext
+grestore
+% Fluid models->Magnetohydrodynamics
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 280.5178 263.9968 moveto
+300.336 279.6908 331.9894 302.4153 363.1742 315 curveto
+378.9169 321.353 396.2258 326.2251 413.2451 329.9575 curveto
+stroke
+0 0 0 edgecolor
+newpath 412.7159 333.4221 moveto
+423.2183 332.0259 lineto
+414.1375 326.568 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 412.7159 333.4221 moveto
+423.2183 332.0259 lineto
+414.1375 326.568 lineto
+closepath stroke
+grestore
+% Two-fluid (ion vs electron)
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+508.7612 288 110.4804 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+431.7612 284.3 moveto 154 (Two-fluid \(ion vs electron\)) alignedtext
+grestore
+% Fluid models->Two-fluid (ion vs electron)
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 312.9372 255.695 moveto
+344.3258 260.8732 384.9547 267.5757 421.0621 273.5323 curveto
+stroke
+0 0 0 edgecolor
+newpath 420.6785 277.0163 moveto
+431.1148 275.1907 lineto
+421.8179 270.1096 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 420.6785 277.0163 moveto
+431.1148 275.1907 lineto
+421.8179 270.1096 lineto
+closepath stroke
+grestore
+% Hybrid models
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+508.7612 234 66.8882 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+465.2612 230.3 moveto 87 (Hybrid models) alignedtext
+grestore
+% Fluid models->Hybrid models
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 319.4438 243.9027 moveto
+353.434 242.1248 396.4674 239.8738 432.9138 237.9674 curveto
+stroke
+0 0 0 edgecolor
+newpath 433.2025 241.4572 moveto
+443.006 237.4395 lineto
+432.8367 234.4667 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 433.2025 241.4572 moveto
+443.006 237.4395 lineto
+432.8367 234.4667 lineto
+closepath stroke
+grestore
+% Kinetic models->Hybrid models
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 294.4251 181.5755 moveto
+314.1832 190.0767 339.702 200.2201 363.1742 207 curveto
+387.7022 214.0849 415.1109 219.7363 439.4734 224.0001 curveto
+stroke
+0 0 0 edgecolor
+newpath 438.9084 227.4542 moveto
+449.3542 225.6836 lineto
+440.0841 220.5537 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 438.9084 227.4542 moveto
+449.3542 225.6836 lineto
+440.0841 220.5537 lineto
+closepath stroke
+grestore
+% Direct Vlasov equation PDE solvers
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+508.7612 180 145.6742 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+404.7612 176.3 moveto 208 (Direct Vlasov equation PDE solvers) alignedtext
+grestore
+% Kinetic models->Direct Vlasov equation PDE solvers
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 325.8538 169.6966 moveto
+338.3521 170.4007 351.8773 171.1626 365.7207 171.9424 curveto
+stroke
+0 0 0 edgecolor
+newpath 365.6659 175.4448 moveto
+375.847 172.5128 lineto
+366.0597 168.4558 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 365.6659 175.4448 moveto
+375.847 172.5128 lineto
+366.0597 168.4558 lineto
+closepath stroke
+grestore
+% N-body approaches
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+508.7612 126 83.6854 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+452.2612 122.3 moveto 113 (N-body approaches) alignedtext
+grestore
+% Kinetic models->N-body approaches
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 317.8728 156.7227 moveto
+351.5585 151.3011 394.5175 144.387 431.1491 138.4913 curveto
+stroke
+0 0 0 edgecolor
+newpath 431.9835 141.9022 moveto
+441.3003 136.8575 lineto
+430.8712 134.9911 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 431.9835 141.9022 moveto
+441.3003 136.8575 lineto
+430.8712 134.9911 lineto
+closepath stroke
+grestore
+% Gyrokinetics
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+508.7612 72 58.4896 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+471.7612 68.3 moveto 74 (Gyrokinetics) alignedtext
+grestore
+% Kinetic models->Gyrokinetics
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 281.3253 148.6697 moveto
+301.2173 133.2395 332.4816 111.265 363.1742 99 curveto
+388.2519 88.9787 417.2647 82.6354 442.7597 78.639 curveto
+stroke
+0 0 0 edgecolor
+newpath 443.3285 82.0931 moveto
+452.7092 77.1685 lineto
+442.3049 75.1683 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 443.3285 82.0931 moveto
+452.7092 77.1685 lineto
+442.3049 75.1683 lineto
+closepath stroke
+grestore
+% Particle-in-cell
+gsave
+0.7 0.3 1 nodecolor
+508.7612 18 63.8893 18 ellipse_path fill
+1 setlinewidth
+filled
+0.7 0.3 1 nodecolor
+508.7612 18 63.8893 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+467.7612 14.3 moveto 82 (Particle-in-cell) alignedtext
+grestore
+% Kinetic models->Particle-in-cell
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 270.1715 147.8164 moveto
+286.0253 120.6929 319.7275 70.1427 363.1742 45 curveto
+384.784 32.4944 410.9523 25.5915 435.1097 21.8401 curveto
+stroke
+0 0 0 edgecolor
+newpath 435.899 25.2641 moveto
+445.3206 20.4182 lineto
+434.9334 18.331 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 435.899 25.2641 moveto
+445.3206 20.4182 lineto
+434.9334 18.331 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 36 36 698 404
+end
+restore
+%%EOF

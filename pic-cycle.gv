@@ -1,0 +1,6 @@
+digraph G {
+    Push -> Gather [label="Gęstość ładunku i prądu"]
+    Gather -> Solve [label="Pola E, B na siatce"]
+    Solve -> Scatter [label="Pola E, B w pozycjach cząstek"]
+    Scatter -> Push [label="Aktualizacje położeń i prędkości"]
+}

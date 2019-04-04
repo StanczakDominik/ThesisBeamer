@@ -1,0 +1,119 @@
+\documentclass{article}
+\usepackage[x11names, rgb]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{snakes,arrows,shapes}
+\usepackage{amsmath}
+%
+%
+
+%
+
+%
+
+\begin{document}
+\pagestyle{empty}
+%
+%
+%
+
+\enlargethispage{100cm}
+% Start of code
+% \begin{tikzpicture}[anchor=mid,>=latex',line join=bevel,]
+\begin{tikzpicture}[>=latex',line join=bevel,]
+  \pgfsetlinewidth{1bp}
+%%
+\pgfsetcolor{black}
+  % Edge: Kinetic models -> Gyrokinetics
+  \draw [->] (281.33bp,148.67bp) .. controls (301.22bp,133.24bp) and (332.48bp,111.26bp)  .. (363.17bp,99.0bp) .. controls (388.25bp,88.979bp) and (417.26bp,82.635bp)  .. (452.71bp,77.169bp);
+  % Edge: Plasma simulation -> Kinetic models
+  \draw [->] (144.71bp,183.18bp) .. controls (159.94bp,180.91bp) and (176.16bp,178.5bp)  .. (201.42bp,174.74bp);
+  % Edge: Kinetic models -> Hybrid models
+  \draw [->] (294.43bp,181.58bp) .. controls (314.18bp,190.08bp) and (339.7bp,200.22bp)  .. (363.17bp,207.0bp) .. controls (387.7bp,214.08bp) and (415.11bp,219.74bp)  .. (449.35bp,225.68bp);
+  % Edge: Fluid models -> Magnetohydrodynamics
+  \draw [->] (280.52bp,264.0bp) .. controls (300.34bp,279.69bp) and (331.99bp,302.42bp)  .. (363.17bp,315.0bp) .. controls (378.92bp,321.35bp) and (396.23bp,326.23bp)  .. (423.22bp,332.03bp);
+  % Edge: Plasma simulation -> Fluid models
+  \draw [->] (126.83bp,207.33bp) .. controls (151.69bp,214.72bp) and (182.06bp,223.75bp)  .. (217.4bp,234.26bp);
+  % Edge: Kinetic models -> N-body approaches
+  \draw [->] (317.87bp,156.72bp) .. controls (351.56bp,151.3bp) and (394.52bp,144.39bp)  .. (441.3bp,136.86bp);
+  % Edge: Kinetic models -> Particle-in-cell
+  \draw [->] (270.17bp,147.82bp) .. controls (286.03bp,120.69bp) and (319.73bp,70.143bp)  .. (363.17bp,45.0bp) .. controls (384.78bp,32.494bp) and (410.95bp,25.591bp)  .. (445.32bp,20.418bp);
+  % Edge: Fluid models -> Two-fluid (ion vs electron)
+  \draw [->] (312.94bp,255.7bp) .. controls (344.33bp,260.87bp) and (384.95bp,267.58bp)  .. (431.11bp,275.19bp);
+  % Edge: Fluid models -> Hybrid models
+  \draw [->] (319.44bp,243.9bp) .. controls (353.43bp,242.12bp) and (396.47bp,239.87bp)  .. (443.01bp,237.44bp);
+  % Edge: Kinetic models -> Direct Vlasov equation PDE solvers
+  \draw [->] (325.85bp,169.7bp) .. controls (338.35bp,170.4bp) and (351.88bp,171.16bp)  .. (375.85bp,172.51bp);
+  % Node: Gyrokinetics
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (508.76bp,72.0bp) node {Gyrokinetics};
+\end{scope}
+  % Node: Two-fluid (ion vs electron)
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (508.76bp,288.0bp) node {Two-fluid (ion vs electron)};
+\end{scope}
+  % Node: Kinetic models
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (260.23bp,166.0bp) node {Kinetic models};
+\end{scope}
+  % Node: Particle-in-cell
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.76,0.7,1.0};
+  \pgfsetstrokecolor{strokecol}
+  \definecolor{fillcol}{rgb}{0.76,0.7,1.0};
+  \pgfsetfillcolor{fillcol}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (508.76bp,18.0bp) node {Particle-in-cell};
+\end{scope}
+  % Node: Plasma simulation
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (78.643bp,193.0bp) node {Plasma simulation};
+\end{scope}
+  % Node: Direct Vlasov equation PDE solvers
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (508.76bp,180.0bp) node {Direct Vlasov equation PDE solvers};
+\end{scope}
+  % Node: Hybrid models
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (508.76bp,234.0bp) node {Hybrid models};
+\end{scope}
+  % Node: Fluid models
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (260.23bp,247.0bp) node {Fluid models};
+\end{scope}
+  % Node: N-body approaches
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (508.76bp,126.0bp) node {N-body approaches};
+\end{scope}
+  % Node: Magnetohydrodynamics
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (508.76bp,342.0bp) node {Magnetohydrodynamics};
+\end{scope}
+%
+\end{tikzpicture}
+% End of code
+
+%
+\end{document}
+%
+
+

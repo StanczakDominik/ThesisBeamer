@@ -1,0 +1,14 @@
+digraph G {
+    rankdir=LR
+    "Plasma simulation" -> "Fluid models"
+    "Fluid models" -> Magnetohydrodynamics
+    "Fluid models" -> "Two-fluid (ion vs electron)"
+    "Plasma simulation" -> "Kinetic models"
+    "Kinetic models" -> "Hybrid models"
+    "Kinetic models" -> "Direct Vlasov equation PDE solvers"
+    "Kinetic models" -> "N-body approaches"
+    "Kinetic models" -> "Gyrokinetics"
+    "Fluid models" -> "Hybrid models"
+    node [style=filled,color=".7 .3 1.0"];
+    "Kinetic models" -> "Particle-in-cell"
+}
